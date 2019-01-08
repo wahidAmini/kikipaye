@@ -1,0 +1,2 @@
+"https://{default}/": { type: upstream, upstream: "kikipaye:http" }
+"http://{default}/": { type: redirect, to: "https://{default}/" }
