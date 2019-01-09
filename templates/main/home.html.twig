@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+    <h1>Kikipaye ! ✅</h1>
+    <hr/>
+    <p> Bienvenue sur Kikipaye, orgaiseur de budget pour projets etre amis,collegues, famille ...<br/>
+        Cliquez sur le boutton "COMMECER" ci-dessous pour commencer un nouveau budget.
+    </p>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>
+                    <a href="{{ path('admin') }}">budget 1</a>
+                </td>
+                <td>
+                    <a href="">budget 2</a>
+                </td>
+                <td>
+                    <a href="">budget 3</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="">budget 4</a>
+                </td>
+                <td>
+                    <a href="">budget 5</a>
+                </td>
+                <td>
+                    <a href="">budget 6</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="">budget 7</a>
+                </td>
+                <td>
+                    <a href="">budget 8</a>
+                </td>
+                <td>
+                    <a href="">budget 9</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <button type="button" class="btn btn-success">Nouveau Budget</button>
+
+
+   
+
+{% endblock %}
