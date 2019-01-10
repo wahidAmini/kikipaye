@@ -11,43 +11,23 @@
 			<th>Balance</th>
 		</tr>
 	</thead>	
-	<tbody>	
+	<tbody>
+		{% for user in users %}
 		<tr>
-			<td><span><input type="text" name="person1" value="Person 1"></span></td>
-			<td><input type="text" value="99">€</td>
-			<td>+ 29.2 €</td>
+			<td><span><input type="text" name="person1" value="{{user.name}}"></span></td>
+			<td><input type="text" value="{{user.spending}}">€</td>
+			<td>{{ (total / user|length) - user.spending }}€</td>
 		</tr>
-		<tr>
-			<td><span><input type="text" name="person2" value="Person 2"></span></td>
-			<td><input type="text" value="80">€</td>
-			<td>+ 10.2 €</td>
-		</tr>
-		<tr>
-			<td><span><input type="text" name="person3" value="Person 3"></span></td>
-			<td><input type="text" value="120">€</td>
-			<td>+ 20.2 €</td>
-		</tr>
-		<tr>
-			<td><span><input type="text" name="person4" value="Person 4"></span></td>
-			<td><input type="text" value="30">€</td>
-			<td>- 39.8 €</td>
-		</tr>
-		<tr>
-			<td><span><input type="text" name="person5" value="Person 5"></span></td>
-			<td><input type="text" value="20">€</td>
-			<td>- 49.8 €</td>
-		</tr>
+		{% endfor %}	
 		<tr>
 			<td><span><input type="text" name="person4" value="" placeholder="Ajouter une person"></span></td>
-			<td></td>
-			<td></td>
 		</tr>
 	</tbody>
 </table>
 <hr>
 <div class="row">
 	<div class="col-md-12">
-		<label>Total : 349 €</label>
+		<label>Total budget: {{total}}</label>
 	</div>
 </div>
 <div class="row">

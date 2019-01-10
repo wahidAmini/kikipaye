@@ -9,11 +9,21 @@
     <p> Bienvenue sur Kikipaye, orgaiseur de budget pour projets etre amis,collegues, famille ...<br/>
         Cliquez sur le boutton "COMMECER" ci-dessous pour commencer un nouveau budget.
     </p>
+    
+    {% if groups %}
+    {% for group in groups %}
+
+        <a href="{{path('admin',{'id':group.id})}}" class="btn btn-primary">{{group.name}}</a>
+    {% endfor %} 
+    {% endif %}  
+
+    
+     
     <table class="table">
         <tbody>
             <tr>
                 <td>
-                    <a href="{{ path('admin') }}">budget 1</a>
+                    <a href="">budget 1</a>
                 </td>
                 <td>
                     <a href="">budget 2</a>
